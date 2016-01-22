@@ -1,6 +1,6 @@
 {
-  "name": "Example Gmail Extension",
-  "description": "Example extension showing use of the Streak Gmail SDK",
+  "name": "Gmail Connector Extension",
+  "description": "Example extension for testing",
   "version": "0.1",
   "content_scripts": [
     {
@@ -8,7 +8,7 @@
         "https://mail.google.com/*",
         "https://inbox.google.com/*"
       ],
-      "js": ["inboxsdk.js","content.js"],
+      "js": ["vendor/inboxsdk.js","scripts/main.js"],
       "run_at": "document_end"
     }
   ],

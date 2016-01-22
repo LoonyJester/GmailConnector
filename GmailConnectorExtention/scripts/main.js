@@ -5,8 +5,8 @@ InboxSDK.load('1.0', 'sdk_LoonyTestSdk2_e0399f0675').then(function (sdk) {
 
 		// a compose view has come into existence, do something with it!
 		composeView.addButton({
-			title: "My Nifty Button!",
-			iconUrl: 'https://lh5.googleusercontent.com/itq66nh65lfCick8cJ-OPuqZ8OUDTIxjCc25dkc4WUT1JG8XG3z6-eboCu63_uDXSqMnLRdlvQ=s128-h128-e365',
+			title: "My Nifty Button!4",
+			iconUrl: '../content/cr.gif',
 			onClick: function(event) {
 				event.composeView.insertTextIntoBodyAtCursor('Hello World!');
 			}

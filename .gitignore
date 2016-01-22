@@ -5,3 +5,4 @@
 /.vs/GmailConnector/v14/.suo
 /GmailConnector.sln
 *.xproj
+/GmailConnectorExtention/GmailConnectorExtention.xproj.user
