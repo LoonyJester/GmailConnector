@@ -6,3 +6,4 @@
 /GmailConnector.sln
 *.xproj
 /GmailConnectorExtention/GmailConnectorExtention.xproj.user
+/.vs/config/applicationhost.config
