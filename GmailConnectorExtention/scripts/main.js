@@ -64,4 +64,83 @@ InboxSDK.load('1.0', 'sdk_LoonyTestSdk2_e0399f0675').then(function (sdk) {
 	    }
 	});
 
+    sdk.Conversations.registerThreadViewHandler(function(threadView) {
+        var el = document.createElement("div");
+        el.innerHTML = '<img src="https://raw.githubusercontent.com/LoonyJester/GmailConnector/master/GmailConnectorExtention/content/ticket.gif" />';
+
+
+        threadView.addSidebarContentPanel({
+            title: 'The thread status',
+            el: el
+        });
+    });
+
+    sdk.Conversations.registerMessageViewHandler(function (messageView) {
+        var min = 0;
+        var max = 2;
+
+        var index = Math.floor(Math.random() * (max - min + 1)) + min;
+
+        switch (index) {
+            case 0:
+                messageView.addAttachmentIcon({
+                    iconUrl: "https://raw.githubusercontent.com/LoonyJester/GmailConnector/master/GmailConnectorExtention/content/ignore.gif",
+                    tooltip: "Ignored",
+                                        onClick: function (event) {
+                                            alert("Test click");
+
+                    }
+                });
+//                messageView.addAttachmentsToolbarButton({
+//                    iconUrl: "https://raw.githubusercontent.com/LoonyJester/GmailConnector/master/GmailConnectorExtention/content/ignore.gif",
+//                    tooltip: "Ignored",
+//                                        onClick: function (event) {
+//                        //	                    alert('onCreate ' + event);
+//                        event.dropdown.el.innerHTML = ddl.replace("[MessageId]", "'For message with ThreadID " + event.threadRowView.getThreadID() +"'");
+//                    }
+//                });
+                break;
+            case 1:
+                messageView.addAttachmentIcon({
+                    iconUrl: "https://raw.githubusercontent.com/LoonyJester/GmailConnector/master/GmailConnectorExtention/content/ticket.gif",
+                    tooltip: "Ticket " + (Math.floor(Math.random() * (30200 - 30000 + 1)) + 30000),
+                    onClick: function (event) {
+                        alert("Test click");
+
+                    }
+                });
+//                messageView.addAttachmentsToolbarButton({
+//                    iconUrl: "https://raw.githubusercontent.com/LoonyJester/GmailConnector/master/GmailConnectorExtention/content/ticket.gif",
+//                    tooltip: "Ticket " + (Math.floor(Math.random() * (30200 - 30000 + 1)) + 30000),
+//                    onClick: function (event) {
+//                        //	                    alert('onCreate ' + event);
+//                        event.dropdown.el.innerHTML = ddl.replace("[MessageId]", "'For message with ThreadID " + event.threadRowView.getThreadID() + "'");
+//                    }
+//                });
+
+                break;
+            default :
+                messageView.addAttachmentIcon({
+                    title: "My Action Button!",
+                    iconUrl: "https://raw.githubusercontent.com/LoonyJester/GmailConnector/master/GmailConnectorExtention/content/create.gif",
+                    onClick: function (event) {
+                        alert("Test click");
+                    },
+                    hasDropdown: true 
+                });
+//                messageView.addAttachmentsToolbarButton({
+//                    title: "My Action Button!",
+//                    iconUrl: "https://raw.githubusercontent.com/LoonyJester/GmailConnector/master/GmailConnectorExtention/content/create.gif",
+//                    onClick: function (event) {
+//                        //	                    alert('onCreate ' + event);
+//                        event.dropdown.el.innerHTML = ddl.replace("[MessageId]", "'For message with ThreadID " + event.threadRowView.getThreadID() +"'");
+//                    },
+//                    hasDropdown: true 
+//                });
+                break;
+        }
+
+
+    });
+
 });
