@@ -37,19 +37,19 @@ InboxSDK.load('1.0', 'sdk_LoonyTestSdk2_e0399f0675').then(function (sdk) {
 
 	    var index = Math.floor(Math.random() * (max - min + 1)) + min;
 	    switch (index) {
-//	        case 0:
-//	            threadRowView.addImage({
-//	                imageUrl: "https://raw.githubusercontent.com/LoonyJester/GmailConnector/master/GmailConnectorExtention/content/ignore.gif",
-//	                tooltip: "Ignored"
-//	            });
-//	            break;
-//	        case 1:
-//	            threadRowView.addImage({
-//	                imageUrl: "https://raw.githubusercontent.com/LoonyJester/GmailConnector/master/GmailConnectorExtention/content/ticket.gif",
-//	                tooltip: "Ticket " + (Math.floor(Math.random() * (30200 - 30000 + 1)) + 30000)
-//	            });
-//
-//	            break;
+	        case 0:
+	            threadRowView.addImage({
+	                imageUrl: "https://raw.githubusercontent.com/LoonyJester/GmailConnector/master/GmailConnectorExtention/content/ignore.gif",
+	                tooltip: "Ignored"
+	            });
+	            break;
+	        case 1:
+	            threadRowView.addImage({
+	                imageUrl: "https://raw.githubusercontent.com/LoonyJester/GmailConnector/master/GmailConnectorExtention/content/ticket.gif",
+	                tooltip: "Ticket " + (Math.floor(Math.random() * (30200 - 30000 + 1)) + 30000)
+	            });
+
+	            break;
 	        default :
 	            threadRowView.addButton({
 	                title: "My Action Button!",
