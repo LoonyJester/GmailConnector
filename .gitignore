@@ -7,3 +7,6 @@
 *.xproj
 /GmailConnectorExtention/GmailConnectorExtention.xproj.user
 /.vs/config/applicationhost.config
+/backend/bin
+/backend/obj/Debug
+/backend/backend.csproj.user
