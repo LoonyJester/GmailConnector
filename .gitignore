@@ -10,3 +10,11 @@
 /backend/bin
 /backend/obj/Debug
 /backend/backend.csproj.user
+/GCE.Backend/bin
+/GCE.Backend/obj/Debug
+/GCE.Backend/GCE.Backend.csproj.user
+/GCE.DataAccess/bin/Debug
+/GCE.DataAccess/obj/Debug
+/GCE.Definitions/bin/Debug
+/GCE.Definitions/obj/Debug
+*.DotSettings
