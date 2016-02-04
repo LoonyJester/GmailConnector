@@ -7,12 +7,15 @@ namespace GCE.Backend.Controllers
     public class HomeController : Controller
     {
         [Route("~/")]
-        public ActionResult Index()
+        public ActionResult Index(string url)
         {
-            var log = MailGunWrapper.GetLogs();
-            IRestResponse m = MailGunWrapper.GetMessage("https://api.mailgun.net/v2/domains/sandboxd58f1141cdf14f9ebeff0300adaf2bc8.mailgun.org/messages/WyJmZTdiMjJhZmNkIiwgWyIyMzQ2ZDVkZi0zMDc3LTQ1ZTQtOTA1Ny1kNTU4MmJlMDI1YWQiXSwgIm1haWxndW4iLCAib2RpbiJd");
-
-             return View();
+//            var log = MailGunWrapper.GetLogs();
+            if (!string.IsNullOrEmpty(url))
+            {
+                IRestResponse m = MailGunWrapper.GetMessage(url);
+                return View();
+            }
+            return View();
         }
 
         public ActionResult About()

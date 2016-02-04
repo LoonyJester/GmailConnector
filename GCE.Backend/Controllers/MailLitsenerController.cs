@@ -13,6 +13,7 @@ namespace GCE.Backend.Controllers
         [ValidateInput(false)]
         public ActionResult Index()
         {
+            
 
 //            var t  = Request.Unvalidated.Form["stripped-html"];
             return Content("OK");
