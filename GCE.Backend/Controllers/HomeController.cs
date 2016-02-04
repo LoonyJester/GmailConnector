@@ -1,16 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using GCE.Services;
+using RestSharp;
 
 namespace GCE.Backend.Controllers
 {
     public class HomeController : Controller
     {
+        [Route("~/")]
         public ActionResult Index()
         {
-            return View();
+            var log = MailGunWrapper.GetLogs();
+            IRestResponse m = MailGunWrapper.GetMessage("https://api.mailgun.net/v2/domains/sandboxd58f1141cdf14f9ebeff0300adaf2bc8.mailgun.org/messages/WyJmZTdiMjJhZmNkIiwgWyIyMzQ2ZDVkZi0zMDc3LTQ1ZTQtOTA1Ny1kNTU4MmJlMDI1YWQiXSwgIm1haWxndW4iLCAib2RpbiJd");
+
+             return View();
         }
 
         public ActionResult About()

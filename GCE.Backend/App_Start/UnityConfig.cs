@@ -35,13 +35,9 @@ namespace GCE.Backend.App_Start
         public static void RegisterTypes(IUnityContainer container)
         {
             container.RegisterType<GCEContext, GCEContext>();
-            // NOTE: To load from web.config uncomment the line below. Make sure to add a Microsoft.Practices.Unity.Configuration to the using statements.
-            // container.LoadConfiguration();
 
-            container.RegisterType<ITicket, Ticket>();
             container.RegisterType<IMessage, Message>();
-            // TODO: Register your types here
-            // container.RegisterType<IProductRepository, ProductRepository>();
+
         }
     }
 }

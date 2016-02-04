@@ -18,3 +18,7 @@
 /GCE.Definitions/bin/Debug
 /GCE.Definitions/obj/Debug
 *.DotSettings
+/GCE.MailRepo/bin/Debug
+/GCE.MailRepo/obj/Debug
+/GCE.Services/obj/Debug
+/GCE.Services/bin/Debug

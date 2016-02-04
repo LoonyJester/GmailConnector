@@ -55,12 +55,11 @@
   <ItemGroup>
     <Compile Include="BaseRepo.cs" />
     <Compile Include="DataObjects\Message.cs" />
-    <Compile Include="DataObjects\Ticket.cs" />
     <Compile Include="GCEContext.cs" />
     <Compile Include="GCEDatabaseInitializer.cs" />
-    <Compile Include="Migrations\201602030938512_Init.cs" />
-    <Compile Include="Migrations\201602030938512_Init.Designer.cs">
-      <DependentUpon>201602030938512_Init.cs</DependentUpon>
+    <Compile Include="Migrations\201602041409057_Reinit.cs" />
+    <Compile Include="Migrations\201602041409057_Reinit.Designer.cs">
+      <DependentUpon>201602041409057_Reinit.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,8 +75,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201602030938512_Init.resx">
-      <DependentUpon>201602030938512_Init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201602041409057_Reinit.resx">
+      <DependentUpon>201602041409057_Reinit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

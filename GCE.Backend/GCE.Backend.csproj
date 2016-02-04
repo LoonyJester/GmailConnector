@@ -89,6 +89,10 @@
       <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net452\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -154,10 +158,12 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\MapperConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MailLitsenerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -214,6 +220,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\MailLisener\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -228,6 +235,10 @@
     <ProjectReference Include="..\GCE.Definitions\GCE.Definitions.csproj">
       <Project>{65B932E3-E4E5-46A6-8513-3A8F4CE36324}</Project>
       <Name>GCE.Definitions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GCE.Services\GCE.Services.csproj">
+      <Project>{ABB9EFD0-683F-44F6-B5C9-A51650D1F2F8}</Project>
+      <Name>GCE.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -3,6 +3,7 @@
     public enum MessageStatus
     {
         None = 0,
-        Attached = 1,
+        Ticket = 1,
+        Note = 2
     }
 }

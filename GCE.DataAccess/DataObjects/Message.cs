@@ -9,15 +9,14 @@ namespace GCE.DataAccess.DataObjects
     public class Message: IMessage
     {
         [Key]
-        public int Id { get; set; }
         [Required]
         [MaxLength(256)]
-        [Index("IX_Messages_MessageId", IsUnique = true)]
         public string MessageId { get; set; }
         [Required]
         [MaxLength(256)]
         [Index("IX_Messages_PrimaryId")]
         public string PrimaryId { get; set; }
+        public int CWTiketId { get; set; }
         public MessageStatus Status { get; set; }
         public DateTime Timestamp { get; set; }
     }

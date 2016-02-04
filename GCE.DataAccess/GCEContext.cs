@@ -11,6 +11,5 @@ namespace GCE.DataAccess
         }
 
         public DbSet<Message> Messages { get; set; }
-        public DbSet<Ticket> Tickets { get; set; }
     }
 }
