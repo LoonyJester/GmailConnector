@@ -1,4 +1,4 @@
-﻿namespace GCE.Definitions.Interfaces
+﻿namespace GCE.Definitions.Interfaces.Services
 {
     public interface IMessageService
     {

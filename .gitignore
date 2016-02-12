@@ -22,3 +22,7 @@
 /GCE.MailRepo/obj/Debug
 /GCE.Services/obj/Debug
 /GCE.Services/bin/Debug
+/TestResults
+/GCE.Tests/bin/Debug
+/GCE.Tests/obj/Debug
+*.user

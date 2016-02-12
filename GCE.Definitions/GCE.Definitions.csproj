@@ -45,6 +45,7 @@
     <Compile Include="Interfaces\Entities\IEntity.cs" />
     <Compile Include="Interfaces\Entities\IMessage.cs" />
     <Compile Include="Interfaces\Base\IRepo.cs" />
+    <Compile Include="Interfaces\Repositories\IMessageRepo.cs" />
     <Compile Include="Interfaces\Services\IMailProcessingService.cs" />
     <Compile Include="Interfaces\Services\IMessageService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
